@@ -16,3 +16,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/partition',function(){
+    return view('new_bca');
+}); 
+
+Route::get('/project/create',function(){
+    echo "<a href='/project/post'>Here</a>";
+});
+
+Route::get('/project/post',function(){
+    return view('project.nested.nested_file');
+});
+
