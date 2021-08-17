@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DemoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,15 +26,20 @@ Route::get('/project', function () {
     echo "in project";
 });
 
-Route::get('/harry', function () {
-    // enter the name of file before .blade.php;
-    return view('harry');
-});
+// Route::get('/harry', function () {
+//     // enter the name of file before .blade.php;
+//     return view('harry');
+// });
+
+// to add controller directly in to route
+Route::get('/harry', [DemoController::class, 'demoHarry']);
 
 Route::get('/sherlock', function () {
     // to access file inside a folder = foldername.filename
     return view('sherlock.sherlock');
 });
+
+Route::get('/code/{id}', [DemoController::class, 'routeParam']);
 
 
 
