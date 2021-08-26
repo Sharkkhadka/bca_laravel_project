@@ -39,7 +39,11 @@ Route::get('/sherlock', function () {
     return view('sherlock.sherlock');
 });
 
-Route::get('/code/{id}', [DemoController::class, 'routeParam']);
+Route::get('/code/{id}/{second_id}/{third}', [DemoController::class, 'routeParam']);
+
+Route::get('/flex', [DemoController::class, 'flex']);
+Route::get('/product', [DemoController::class, 'product']);
+Route::get('/task', [DemoController::class, 'task']);
 
 
 
