@@ -18,7 +18,7 @@ class DemoController extends Controller
     }
 
     public function flex(){
-        return view('flex.flex');
+        return view('main.index');
     }
 
     public function product(){
