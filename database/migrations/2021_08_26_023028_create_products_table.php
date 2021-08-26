@@ -18,7 +18,7 @@ class CreateProductsTable extends Migration
             $table->string('title');
             $table->text('description')->default('lorem ipsum');
             $table->dateTime('deadline')->nullable();
-            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('user_id')->nullable()->after();
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
